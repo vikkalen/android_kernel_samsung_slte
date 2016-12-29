@@ -708,8 +708,10 @@ found:
 		paddr = get_mci_base_phys(len);
 		if (!paddr)
 			return -EFAULT;
+
 		if (len != ctx.mci_base.len)
 			return -EINVAL;
+
 		vmarea->vm_flags |= VM_IO;
 		/*
 		 * Convert kernel address to user address. Kernel address begins
