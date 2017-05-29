@@ -797,9 +797,9 @@ vfs_kern_mount(struct file_system_type *type, int flags, const char *name, void 
 			return ERR_PTR(-ENOMEM);
 		}
 	}
-	if (flags & MS_KERNMOUNT)
+	if (flags & MS_KERNMOUNT) {
 		mnt->mnt.mnt_flags = MNT_INTERNAL;
-
+	}
 	root = mount_fs(type, flags, name, &mnt->mnt, data);
 	if (IS_ERR(root)) {
 		kfree(mnt->mnt.data);
