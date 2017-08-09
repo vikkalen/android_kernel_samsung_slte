@@ -194,6 +194,7 @@ struct touchkey_i2c {
 	struct pinctrl *pinctrl_i2c;
 	struct pinctrl_state *pin_state[4];
 	int support_multi_touch;
+    atomic_t keypad_enable;
 };
 
 extern struct class *sec_class;
