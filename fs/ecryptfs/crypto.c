@@ -46,6 +46,8 @@
 #include "ecryptfs_dek.h"
 #endif
 
+#define ECRYPTFS_DEK_DEBUG 0
+
 static int
 ecryptfs_decrypt_page_offset(struct ecryptfs_crypt_stat *crypt_stat,
 			     struct page *dst_page, int dst_offset,
