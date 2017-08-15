@@ -69,13 +69,6 @@
 /* Timeout value for polling DRDY signal assertion */
 #define DRDY_TIMEOUT_MS      40
 
-#ifdef CONFIG_SEC_FACTORY
-#undef ENABLE_SENSORS_FPRINT_SECURE
-#else
-#define ENABLE_SENSORS_FPRINT_SECURE
-#define FEATURE_SPI_WAKELOCK
-#endif /* CONFIG_SEC_FACTORY */
-
 /*
  * Definitions of structures which are used by IOCTL commands
  */
